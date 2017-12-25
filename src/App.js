@@ -32,9 +32,9 @@ render()
 {
 return(
 <div style={{textAlign:"center",color: "#1a053b"}}>
-<h1>Shopping App</h1>
+<h1>Stores</h1>
 { this.state.editingProcess?(
-<div style={{padding: "6vh", backgroundColor: "#1a0006"}}>
+<div style={{padding: "6vh", backgroundColor: "#1a0006", boxShadow: '0 8px 6px -6px black'}}>
 <p style={{color: "white"}}>Name Of The Shop: </p>
 <input onChange={(e)=>this._changeCurrentShop('shopName',e.target.value )} type = {"text"}/>
 <p style={{color: "white"}}>Phone Number: </p>
@@ -52,7 +52,7 @@ return(
           {
             this.state.shops.map((shop,i)=>
             (
-              <li key={i} style={{margin:'5vh', backgroundColor: '#dfffb3', padding: '30px'}}>
+              <li key={i} style={{margin:'5vh', backgroundColor: '#e9e9e9', padding: '30px', boxShadow: '0 8px 6px -6px black'}}>
                 <h2>{shop.shopName}</h2>
                 <p>Phone: {shop.phoneNo}</p>
                 <p>Address: {shop.address}</p>
@@ -65,6 +65,7 @@ return(
   <button onClick={()=> this._shopEditor()}>
     Add New Store
     </button>
+  <h1>No Stores Added</h1>
   </div>
 </div>
 );
